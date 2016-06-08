@@ -246,6 +246,8 @@ public class Logger extends MarkerIgnoringBase
         StackTraceElement[] elements = new Throwable().getStackTrace();
         for ( StackTraceElement element : elements )
         {
+            Log.d( getClass().getName(), "!!!" );
+
             if ( element.getClassName().startsWith( thisClassName ) )
             {
                 Log.d( getClass().getName(), "FOUND: "+element.toString() );
