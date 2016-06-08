@@ -239,6 +239,8 @@ public class Logger extends MarkerIgnoringBase
         String thisClassName = getClass().getName();
         boolean thisClassFound = false;
 
+        new Throwable().printStackTrace();
+
         StackTraceElement[] elements = new Throwable().getStackTrace();
         for ( StackTraceElement element : elements )
         {
