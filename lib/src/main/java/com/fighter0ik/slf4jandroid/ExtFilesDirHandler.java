@@ -1,7 +1,6 @@
 package com.fighter0ik.slf4jandroid;
 
 import android.content.Context;
-import android.util.Log;
 
 import java.io.File;
 import java.io.IOException;
@@ -102,7 +101,6 @@ public class ExtFilesDirHandler extends FileHandler
 
         File dir = context.getExternalFilesDir( null );
         File file = new File( dir, pattern );
-        Log.d( ExtFilesDirHandler.class.getName(), file.getAbsolutePath() );
         return file.getAbsolutePath();
     }
 
