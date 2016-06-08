@@ -246,12 +246,12 @@ public class Logger extends MarkerIgnoringBase
         {
             if ( element.getClassName().startsWith( thisClassName ) )
             {
-                System.out.println( "FOUND: "+element.toString() );
+                System.err.println( "FOUND: "+element.toString() );
                 thisClassFound = true;
             }
             else if ( thisClassFound )
             {
-                System.out.println( element.toString() );
+                System.err.println( element.toString() );
                 record.setSourceClassName( element.getClassName() );
                 record.setSourceMethodName( element.getMethodName() );
                 break;
