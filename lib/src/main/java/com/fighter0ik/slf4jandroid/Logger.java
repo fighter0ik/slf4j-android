@@ -1,5 +1,7 @@
 package com.fighter0ik.slf4jandroid;
 
+import android.util.Log;
+
 import org.slf4j.helpers.MarkerIgnoringBase;
 
 import java.util.logging.Level;
@@ -246,12 +248,12 @@ public class Logger extends MarkerIgnoringBase
         {
             if ( element.getClassName().startsWith( thisClassName ) )
             {
-                System.out.println( "FOUND: "+element.toString() );
+                Log.d( getClass().getName(), "FOUND: "+element.toString() );
                 thisClassFound = true;
             }
             else if ( thisClassFound )
             {
-                System.out.println( element.toString() );
+                Log.d( getClass().getName(), element.toString() );
                 record.setSourceClassName( element.getClassName() );
                 record.setSourceMethodName( element.getMethodName() );
                 break;
