@@ -56,7 +56,6 @@ public class LogcatHandler extends Handler
 
         String tag = record.getLoggerName();
         if ( tag.length()>sMaxTagLength ) tag = tag.substring( 0, sMaxTagLength );
-        if ( !Log.isLoggable( tag, logcatLevel ) ) return;
 
         String msg;
         java.util.logging.Formatter formatter = getFormatter();
